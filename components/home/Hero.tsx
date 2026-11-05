@@ -1,10 +1,9 @@
 import { GiSparkles } from 'react-icons/gi';
-import { ArrowRight, Mail, Code2 } from 'lucide-react';
+import { LuArrowRight, LuFileCode2, LuMail } from 'react-icons/lu';
 
 export const HeroSection = () => {
 	return (
-		<section className='relative isolate flex min-h-[88dvh] items-center justify-center overflow-hidden bg-slate-100 pt-24 text-slate-900 dark:bg-slate-950 dark:text-white'>
-			{/* Background Effects */}
+		<section className='relative isolate flex min-h-[88dvh] items-center justify-center overflow-hidden bg-slate-100 pt-24 text-gray-900 dark:bg-slate-900 dark:text-white'>
 			<div className='pointer-events-none absolute inset-0 -z-10 overflow-hidden'>
 				<div className='absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[120px] dark:bg-blue-600/15' />
 
@@ -12,7 +11,7 @@ export const HeroSection = () => {
 
 				<div className='absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.06)_1px,transparent_1px)] bg-[size:32px_32px]' />
 
-				<div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-50 dark:to-slate-950' />
+				<div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-50 dark:to-slate-900' />
 			</div>
 
 			<div className='container relative z-10 mx-auto px-5 py-16 sm:px-6'>
@@ -28,7 +27,6 @@ export const HeroSection = () => {
 						<span className='ml-1 size-1.5 animate-pulse rounded-full bg-emerald-500' />
 					</div>
 
-					{/* Heading */}
 					<h1 className='text-4xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl'>
 						Build better software.
 						<span className='mt-2 block bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-cyan-300 dark:to-indigo-400'>
@@ -36,7 +34,6 @@ export const HeroSection = () => {
 						</span>
 					</h1>
 
-					{/* Description */}
 					<p className='mx-auto mb-10 mt-7 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg md:text-xl'>
 						Master modern software development with practical tutorials,
 						industry best practices, and real-world projects.
@@ -46,11 +43,10 @@ export const HeroSection = () => {
 						</span>
 					</p>
 
-					{/* Newsletter Form */}
 					<div className='mx-auto max-w-xl rounded-2xl border border-slate-200 bg-white/80 p-2 shadow-xl shadow-blue-950/5 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/70 dark:shadow-black/20'>
 						<form className='flex flex-col gap-2 sm:flex-row'>
 							<div className='flex h-12 flex-1 items-center gap-3 px-3'>
-								<Mail className='size-5 shrink-0 text-slate-400' />
+								<LuMail className='size-5 shrink-0 text-slate-400' />
 
 								<input
 									type='email'
@@ -65,15 +61,14 @@ export const HeroSection = () => {
 								className='group flex h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-7 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-blue-500 hover:to-indigo-500 hover:shadow-blue-600/30 active:translate-y-0'
 							>
 								Subscribe
-								<ArrowRight className='size-4 transition-transform duration-200 group-hover:translate-x-1' />
+								<LuArrowRight className='size-4 transition-transform duration-200 group-hover:translate-x-1' />
 							</button>
 						</form>
 					</div>
 
-					{/* Social Proof */}
 					<div className='mt-7 flex flex-col items-center justify-center gap-3 text-sm text-slate-500 dark:text-slate-400 sm:flex-row'>
 						<div className='flex items-center gap-2'>
-							<Code2 className='size-4 text-blue-500' />
+							<LuFileCode2 className='size-4 text-blue-500' />
 
 							<span>
 								Join{' '}
