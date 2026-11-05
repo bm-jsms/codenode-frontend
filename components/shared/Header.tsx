@@ -7,32 +7,32 @@ import { SearchForm } from './SearchForm';
 import { Logo } from './Logo';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import { FaBarsStaggered, FaXmark } from 'react-icons/fa6';
-import {
-	House,
-	FileText,
-	FolderOpen,
-	ChevronRight,
-	Settings2,
-} from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import ThemeToggle from '../ToggleTheme';
+import {
+	LuChevronRight,
+	LuFileText,
+	LuFolderOpen,
+	LuHouse,
+	LuSettings2,
+} from 'react-icons/lu';
 
 const navigation = [
 	{
 		label: 'Home',
 		href: '/',
-		icon: House,
+		icon: LuHouse,
 	},
 	{
 		label: 'All Posts',
 		href: '/posts',
-		icon: FileText,
+		icon: LuFileText,
 	},
 	{
 		label: 'Categories',
 		href: '/categories',
-		icon: FolderOpen,
+		icon: LuFolderOpen,
 	},
 ];
 
@@ -63,11 +63,9 @@ export const Header = () => {
 	return (
 		<>
 			<header className='sticky top-0 z-40 w-full border-b border-slate-200 bg-white/90 text-slate-700 backdrop-blur-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950/90 dark:text-slate-200'>
-				{/* Main Header */}
 				<div className='container mx-auto flex items-center justify-between gap-6 px-4 py-4'>
 					<Logo />
 
-					{/* Desktop Navigation */}
 					<nav className='hidden md:flex'>
 						<ul className='flex items-center gap-8'>
 							{navigation.map(({ label, href }) => (
@@ -92,7 +90,6 @@ export const Header = () => {
 						</ul>
 					</nav>
 
-					{/* Desktop Actions */}
 					<div className='hidden items-center gap-5 md:flex'>
 						<SearchForm />
 
@@ -101,7 +98,6 @@ export const Header = () => {
 						<ThemeToggle />
 					</div>
 
-					{/* Mobile Actions */}
 					<div className='flex items-center gap-3 md:hidden'>
 						<button
 							aria-label='Open search'
@@ -223,7 +219,7 @@ export const Header = () => {
 													{label}
 												</span>
 
-												<ChevronRight
+												<LuChevronRight
 													size={16}
 													className={cn(
 														'transition-all duration-200',
@@ -247,7 +243,7 @@ export const Header = () => {
 
 						<div className='flex items-center justify-between rounded-xl border border-slate-200/80 bg-slate-50 px-4 py-3 transition-colors dark:border-slate-800 dark:bg-slate-900'>
 							<div className='flex items-center gap-3'>
-								<Settings2
+								<LuSettings2
 									size={18}
 									className='text-slate-400 dark:text-slate-500'
 								/>
